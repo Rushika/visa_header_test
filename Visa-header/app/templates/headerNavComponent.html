@@ -1,0 +1,20 @@
+<div class="container-fluid">
+    <nav class="navbar navbar-default navbar-static-top navbar">
+        <a class="navbar-brand logoImg" href="#"><img src="assets/images/logo.png"> </a>
+        <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right">
+                <li class="" ng-repeat="nav in vm.navigationLinks" ng-class="{active: vm.selected == $index}" ng-click="vm.selectMenu($index)"><a href="#">{{nav.link}}</a>
+                </li>
+                <li class="line"></li>
+                <li class="searchIcon"></li>
+            </ul>
+        </div>
+        </nav>
+    <div class="dropdown" ng-if="vm.subLinks.length > 0">
+        <header-dropdown-component sub-nav="vm.subLinks"></header-dropdown-component>
+    </div>
+
+
+
+
+</div>
